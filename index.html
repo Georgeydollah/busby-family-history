@@ -16,277 +16,302 @@
         body { 
             font-family: 'Georgia', serif; 
             line-height: 1.8; 
-            max-width: 1000px; 
+            max-width: 1100px; 
             margin: 0 auto; 
             padding: 40px 20px; 
             color: var(--text-main);
             background-color: var(--bg-color);
         }
 
-        h1, h2, h3 { 
-            color: var(--primary); 
-            font-weight: normal;
-        }
+        h1, h2, h3, h4 { color: var(--primary); font-weight: normal; }
 
         h1 { 
-            font-size: 3em;
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 20px;
-            margin-bottom: 10px;
+            font-size: 3em; text-align: center; border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px; margin-bottom: 10px;
         }
 
-        .intro {
-            font-size: 1.2em;
-            text-align: center;
-            font-style: italic;
-            color: #555;
-            margin-bottom: 50px;
-        }
-
+        .intro { font-size: 1.2em; text-align: center; font-style: italic; color: #555; margin-bottom: 50px; }
         a { color: var(--secondary); text-decoration: none; font-weight: bold; transition: color 0.3s;}
         a:hover { color: var(--primary); text-decoration: underline; }
 
-        /* Interactive Timeline Styling */
-        .timeline-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-            justify-content: center;
-        }
-
-        .timeline-btn {
-            background-color: #fff;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            padding: 10px 20px;
-            font-size: 1.1em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-        }
-
-        .timeline-btn:hover, .timeline-btn.active {
-            background-color: var(--primary);
-            color: #fff;
-        }
-
-        .generation-content {
-            display: none;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary);
-            animation: fadeIn 0.5s ease-in-out;
-            margin-bottom: 50px;
-        }
-
-        .generation-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Two-column layout for Sections */
-        .grid-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        @media(max-width: 768px) {
-            .grid-section { grid-template-columns: 1fr; }
-        }
-
-        .card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--secondary);
-        }
-
+        /* Two-column layout for text and images */
+        .flex-section { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 50px; align-items: center; }
+        .flex-content { flex: 1 1 500px; }
+        .flex-image { flex: 1 1 300px; text-align: center; }
+        
         .image-placeholder {
-            width: 100%;
-            background-color: #eee;
-            border: 2px dashed #ccc;
-            text-align: center;
-            padding: 40px 0;
-            margin: 20px 0;
-            color: #777;
-            font-style: italic;
-            border-radius: 8px;
+            width: 100%; background-color: #eee; border: 2px dashed #ccc;
+            padding: 60px 20px; color: #777; font-style: italic; border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        footer { 
-            margin-top: 60px; 
-            text-align: center; 
-            font-size: 0.9em; 
-            color: #777; 
-            border-top: 1px solid var(--border-light); 
-            padding-top: 20px; 
+        /* Thematic Sections */
+        .theme-box {
+            background: #eef2f5; padding: 30px; border-radius: 8px;
+            border-left: 5px solid var(--primary); margin-bottom: 40px;
         }
+
+        /* Interactive Timeline Styling */
+        .timeline-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; }
+        .timeline-btn {
+            background-color: #fff; border: 1px solid var(--primary); color: var(--primary);
+            padding: 10px 20px; font-size: 1.1em; cursor: pointer; border-radius: 5px;
+            transition: all 0.3s ease; font-family: 'Georgia', serif;
+        }
+        .timeline-btn:hover, .timeline-btn.active { background-color: var(--primary); color: #fff; }
+        
+        .generation-content {
+            display: none; background: #fff; padding: 30px; border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary);
+            animation: fadeIn 0.4s ease-in-out; margin-bottom: 50px;
+        }
+        .generation-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Verbatim Archive Styling */
+        .verbatim-archive {
+            background: #fff; border: 1px solid #ccc; padding: 20px;
+            height: 400px; overflow-y: scroll; font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em; line-height: 1.5; color: #444; border-radius: 5px;
+        }
+
+        footer { margin-top: 60px; text-align: center; font-size: 0.9em; color: #777; border-top: 1px solid var(--border-light); padding-top: 20px; }
     </style>
 </head>
 <body>
 
     <h1>The Busby Family History</h1>
-    
     <div class="intro">
-        <p>A continuous legacy stretching from the 13th century to the present day. The earliest recorded Oxfordshire Busby was Alexander Busby of Milcombe, who purchased a 'hide' from Eynsham Abbey in 1241[cite: 21].</p>
+        <p>A continuous legacy stretching from the 13th century to the present day. Tracing the path from Nordic origins to the master builders of Oxfordshire.</p>
     </div>
 
-    <!-- Images Section -->
-    <h2>Family Artifacts</h2>
-    <div class="grid-section">
-        <div class="card">
-            <h3>The Coat of Arms</h3>
-            <div class="image-placeholder">
-                <img src="images/crest.jpg" alt="The Busby Coat of Arms" style="max-width:100%; display:none;">
-                [Insert Family Crest Image Here]
-            </div>
-            <p>The official Coat of Arms granted to Dr. John Walter Busby in 1976 by the College of Arms.</p>
+    <!-- Origins Section -->
+    <div class="flex-section">
+        <div class="flex-content">
+            <h2>From the North: Our Viking Origins</h2>
+            <p>The story of the Busby family begins long before our arrival in Oxfordshire. Etymologically and historically, the name "Busby" points to direct Nordic and Viking descent. Derived from Old Norse, <em>"busk"</em> refers to a shrub or bush, and the suffix <em>"-by"</em> denotes a farmstead or settlement. </p>
+            <p>During the era of the Danelaw, Viking settlers established roots in <a href="https://en.wikipedia.org/wiki/Yorkshire" target="_blank">Yorkshire</a>, founding the village of <a href="https://en.wikipedia.org/wiki/Great_Busby" target="_blank">Great Busby</a>. It was from these northern settlements that our ancestors eventually migrated south toward the Cotswolds, drawn by the booming agricultural economies of the abbeys.</p>
         </div>
-        <div class="card">
-            <h3>The Hook Norton Shepherds</h3>
+        <div class="flex-image">
             <div class="image-placeholder">
-                <img src="images/brass-rubbing.jpg" alt="Brass rubbing of shepherds" style="max-width:100%; display:none;">
-                [Insert Brass Rubbing Image Here]
+                <img src="images/nordic-map.jpg" alt="Map of Nordic migration to Yorkshire and Oxford" style="max-width:100%; display:none;">
+                [Insert Map: Nordic Migration to Yorkshire and Oxford]
             </div>
-            <p>A historic brass rubbing depicting the early shepherds of <a href="https://en.wikipedia.org/wiki/Hook_Norton" target="_blank">Hook Norton</a>, celebrating the region's rich wool trade and the famous 'Lions of the Cotswolds' sheep.</p>
         </div>
     </div>
 
+    <!-- Wool Trade & Sheep -->
+    <div class="theme-box">
+        <h2>The Lions of the Cotswolds & The Wool Trade</h2>
+        <div class="flex-section" style="margin-bottom:0;">
+            <div class="flex-content">
+                <p>Upon migrating to Oxfordshire, the early Busbys found their fortune as sheep farmers and wool merchants working alongside the local monks and abbeys. The key to this wealth was a rare, majestic breed of sheep originally brought to the British Isles by the Romans: the <strong>Lions of the Cotswolds</strong>.</p>
+                <p>Renowned for their large size and extraordinary, silky fleeces, these sheep produced some of the highest quality wool in medieval Europe. The Busby ancestors capitalized on this, exporting the raw, silky wool directly to the weaving powerhouses of <a href="https://en.wikipedia.org/wiki/Florence" target="_blank">Florence, Italy</a>. This international trade laid the financial foundation for the family's transition into the yeoman and master tradesmen classes.</p>
+            </div>
+            <div class="flex-image">
+                <div class="image-placeholder" style="padding: 30px 20px;">
+                    <img src="images/brass-rubbing.jpg" alt="Brass rubbing of Hook Norton shepherds" style="max-width:100%; display:none;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Family Consistencies -->
+    <div class="theme-box" style="background: #fff; border: 1px solid var(--border-light); border-left: 5px solid var(--secondary);">
+        <h2>Generational Consistencies & Traits</h2>
+        <p>A deep analysis of over 500 years of family records reveals striking consistencies that define the Busby lineage:</p>
+        <ul>
+            <li><strong>Devotion to the Church:</strong> A continuous thread of church involvement runs through the centuries. From Simon Busby (1598) leaving barley to the Deddington church[cite: 22], to John Busby endowing church bells and altars[cite: 20], to Henry Busby (1855) founding the Hook Norton Temperance Band[cite: 4]. The family regularly sponsored pews, screens, and bell-ringing traditions.</li>
+            <li><strong>The Building Trades:</strong> While they began as husbandmen and shepherds[cite: 21], by the 18th century, the family evolved into master tradesmen. The direct line is filled with master slaters, plasterers, carpenters, and glaziers[cite: 4, 6, 9].</li>
+            <li><strong>Longevity:</strong> In eras plagued by high infant mortality, the Busby adults showed remarkable resilience. Many family members, such as William (died aged 78 in 1785) and Henry (died aged 77 in 1933), lived deep into their 70s and 80s[cite: 2, 15].</li>
+            <li><strong>The "Busby Eyebrows":</strong> A famously strong, dark genetic trait passed down through the generations, so prominent that relatives often joked, "you can tell a Busby by their eyebrows!"</li>
+        </ul>
+    </div>
+
+    <!-- Oxford Map -->
+    <div class="flex-section">
+        <div class="flex-image">
+            <div class="image-placeholder">
+                <img src="images/oxford-map.jpg" alt="Map of Deddington and Hook Norton area" style="max-width:100%; display:none;">
+                [Insert Map: Deddington & Hook Norton Heritage Area]
+            </div>
+        </div>
+        <div class="flex-content">
+            <h2>500 Years in Oxfordshire</h2>
+            <p>Our ancestors left an indelible mark on Oxfordshire's landscape:</p>
+            <ul>
+                <li><strong><a href="https://en.wikipedia.org/wiki/Deddington" target="_blank">Clifton & Deddington</a>:</strong> The foundational roots from the 1500s through the 17th century[cite: 21, 28].</li>
+                <li><strong><a href="https://en.wikipedia.org/wiki/Enstone" target="_blank">Enstone & Great Rollright</a>:</strong> Home of the Reade and Spelsbury families, who intermarried with the Busbys[cite: 19, 28].</li>
+                <li><strong><a href="https://en.wikipedia.org/wiki/Hook_Norton" target="_blank">Hook Norton</a>:</strong> The true heartland of the modern family. From 1702 onwards, generations operated as master slaters and musicians here[cite: 4, 9, 29].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Notable Figures -->
+    <h2>Notable Figures & Connections</h2>
+    <div class="flex-section">
+        <div class="flex-content">
+            <h3><a href="https://en.wikipedia.org/wiki/Richard_Busby" target="_blank">Dr. Richard Busby</a> (1606–1695)</h3>
+            <p>An Anglican priest who served as the famously strict Headmaster of Westminster School for over 55 years. Among the many illustrious pupils he shaped was the legendary architect <strong><a href="https://en.wikipedia.org/wiki/Christopher_Wren" target="_blank">Sir Christopher Wren</a></strong>, the man responsible for rebuilding St Paul's Cathedral and 51 other churches after the Great Fire of London.</p>
+            
+            <h3><a href="https://en.wikipedia.org/wiki/John_Busby" target="_blank">Sir John Busby</a></h3>
+            <p>A prominent lawyer who worked for the Royalists and the Verney family. He was granted a knighthood and a family crest. While he is not in our direct paternal lineage, his crest was proudly (if unofficially) adopted by many later Busby tradesmen who carved it onto their tombstones across Oxfordshire.</p>
+        </div>
+        <div class="flex-image">
+            <div class="image-placeholder">
+                <img src="images/sir-john-crest.jpg" alt="Sir John Busby Crest" style="max-width:100%; display:none;">
+                https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQXzVr8EPcJvNAmfknCrDTgDeOt9udtp8EehVBCH6xZkl_znmpGlb4GBbeNoGDQT1uxmxq_3132_RIG6Aw
+            </div>
+        </div>
+    </div>
+
+    <!-- Official Family Crest -->
+    <div class="flex-section">
+        <div class="flex-image">
+            <div class="image-placeholder">
+                <img src="images/official-crest.jpg" alt="Official Busby Crest" style="max-width:100%; display:none;">
+                
+            </div>
+        </div>
+        <div class="flex-content">
+            <h3>Dr. John Walter Busby & The Official Crest</h3>
+            <p>While the earlier generations "borrowed" the arms of Sir John Busby, Dr. John Walter Busby (a doctor of medicine in Warwick) proudly solidified this specific branch of the family's legacy. He successfully petitioned the College of Arms and was granted a true, official Coat of Arms in 1976.</p>
+        </div>
+    </div>
+
+    <!-- Interactive Lineage -->
     <h2>Direct Ancestral Line</h2>
     <p style="text-align:center; margin-bottom: 20px;"><em>Select a generation below to explore the lineage.</em></p>
     
     <div class="timeline-container">
-        <button class="timeline-btn active" onclick="openTab('gen1')">1558</button>
-        <button class="timeline-btn" onclick="openTab('gen2')">1598</button>
-        <button class="timeline-btn" onclick="openTab('gen3')">1609</button>
-        <button class="timeline-btn" onclick="openTab('gen4')">1650</button>
-        <button class="timeline-btn" onclick="openTab('gen5')">1684</button>
-        <button class="timeline-btn" onclick="openTab('gen7')">1721</button>
-        <button class="timeline-btn" onclick="openTab('gen8')">1759</button>
-        <button class="timeline-btn" onclick="openTab('gen9')">1796</button>
-        <button class="timeline-btn" onclick="openTab('gen10')">1825</button>
-        <button class="timeline-btn" onclick="openTab('gen11')">1855</button>
-        <button class="timeline-btn" onclick="openTab('genModern')">1976</button>
+        <button class="timeline-btn active" onclick="openTab('gen1')">Gen 1</button>
+        <button class="timeline-btn" onclick="openTab('gen2')">Gen 2</button>
+        <button class="timeline-btn" onclick="openTab('gen3')">Gen 3</button>
+        <button class="timeline-btn" onclick="openTab('gen4')">Gen 4</button>
+        <button class="timeline-btn" onclick="openTab('gen5')">Gen 5</button>
+        <button class="timeline-btn" onclick="openTab('gen6')">Gen 6</button>
+        <button class="timeline-btn" onclick="openTab('gen7')">Gen 7</button>
+        <button class="timeline-btn" onclick="openTab('gen8')">Gen 8</button>
+        <button class="timeline-btn" onclick="openTab('gen9')">Gen 9</button>
+        <button class="timeline-btn" onclick="openTab('gen10')">Gen 10</button>
+        <button class="timeline-btn" onclick="openTab('gen11')">Gen 11</button>
     </div>
 
     <div id="gen1" class="generation-content active">
         <h3>Generation 1: John Busby (Died c. 1558)</h3>
-        <p>John Busby of the hamlet of Clifton was a husbandman and died circa 1558[cite: 21]. His will was proved at Oxford, and he requested his body to be buried in the churchyard of <a href="https://en.wikipedia.org/wiki/Deddington" target="_blank">Deddington</a>[cite: 21].</p>
+        <p>John Busby of the hamlet of Clifton was a husbandman and died circa 1558[cite: 21]. His will was proved at Oxford, requesting burial in Deddington churchyard[cite: 21].</p>
     </div>
-
     <div id="gen2" class="generation-content">
         <h3>Generation 2: Simon Busby (Died c. 1598)</h3>
-        <p>Simon Busby was a husbandman who died circa 1598[cite: 22]. A charitable man, he left ten shillings to the poor of Clifton and Deddington, and a bushel of barley to Deddington church[cite: 22].</p>
+        <p>Simon Busby was a husbandman who left ten shillings to the poor of Clifton and Deddington, and a bushel of barley to the Deddington church[cite: 22].</p>
     </div>
-
     <div id="gen3" class="generation-content">
         <h3>Generation 3: William Busby (Died c. 1609)</h3>
-        <p>William Busby was a husbandman buried in Deddington churchyard circa 1609[cite: 23]. His widow, Elizabeth, lived long enough to remarry, and her detailed will of 1656 was proved in the Court of Canterbury[cite: 24].</p>
+        <p>William Busby was a husbandman buried in Deddington churchyard circa 1609[cite: 23]. His widow, Elizabeth, lived long enough to remarry[cite: 24].</p>
     </div>
-
     <div id="gen4" class="generation-content">
         <h3>Generation 4: Simon Busby (Died 1650)</h3>
-        <p>Simon Busby died in 1650[cite: 25]. He and his wife Anne had advanced to the yeoman class; the 1665 Oxfordshire Hearth Tax recorded Anne as having three hearths in her Clifton home, indicating a substantial property of six to eleven rooms[cite: 25].</p>
+        <p>Simon Busby died in 1650[cite: 25]. His wife Anne was recorded in the 1665 Hearth Tax as having three hearths in her Clifton home, indicating a substantial property and their rise to the yeoman class[cite: 25].</p>
     </div>
-
     <div id="gen5" class="generation-content">
         <h3>Generation 5: Robert Busby (Baptized 1644)</h3>
-        <p>Robert Busby was baptized in Deddington church in November 1644[cite: 28]. In 1682, he married Mary Reade of <a href="https://en.wikipedia.org/wiki/Enstone" target="_blank">Enstone</a>[cite: 28]. Mary is almost certainly the ancestor who purchased the family property in Hook Norton in 1702[cite: 29].</p>
+        <p>Robert Busby married Mary Reade of Enstone in 1682[cite: 28]. Mary is almost certainly the ancestor who purchased the family property in Hook Norton in 1702[cite: 29].</p>
     </div>
-
+    <div id="gen6" class="generation-content">
+        <h3>Generation 6: Robert Busby (Baptized 1684)</h3>
+        <p>Baptized in Deddington church, he married Sarah Spelsbury in 1705[cite: 19].</p>
+    </div>
     <div id="gen7" class="generation-content">
         <h3>Generation 7: Benjamin Busby (Baptized 1721)</h3>
-        <p>Baptized in Dunstew in 1721, this Benjamin proved to be the vital link connecting the Hook Norton family back to their Deddington roots[cite: 18]. This connection was discovered via a 1765 Settlement Certificate miraculously found under a bed in Hook Norton[cite: 18]!</p>
+        <p>This Benjamin proved to be the vital link connecting the Hook Norton family back to their Deddington roots[cite: 18]. This was discovered via a 1765 Settlement Certificate signed by <a href="https://en.wikipedia.org/wiki/Edward_Stone_(natural_philosopher)" target="_blank">Rev. Edward Stone</a> (the man who discovered the active ingredient in aspirin)[cite: 17, 18]!</p>
     </div>
-
     <div id="gen8" class="generation-content">
         <h3>Generation 8: Benjamin Busby (Baptized 1759)</h3>
-        <p>Baptized in Hook Norton church in 1759, Benjamin continued the family's presence in the house/farm property now known as Laburnum Cottage on Queen Street[cite: 16]. He successfully diversified into the building trade[cite: 14].</p>
+        <p>Benjamin continued the family's presence in Laburnum Cottage on Queen Street, Hook Norton[cite: 16]. He successfully diversified the family into the building trade[cite: 14].</p>
     </div>
-
     <div id="gen9" class="generation-content">
         <h3>Generation 9: Benjamin Busby (Baptized 1796)</h3>
-        <p>Baptized in Hook Norton on May 5th 1796, Benjamin married Anna Prophett in 1822[cite: 12]. Anna was the daughter of a well-established <a href="https://en.wikipedia.org/wiki/Quakers" target="_blank">Quaker</a> family; her mother's side (the Harrises) were founder members of the 17th-century Quaker movement in <a href="https://en.wikipedia.org/wiki/Charlbury" target="_blank">Charlbury</a>, Oxfordshire[cite: 12].</p>
+        <p>Benjamin married Anna Prophett in 1822[cite: 12]. Anna's mother's side (the Harrises) were historically documented founder members of the 17th-century <a href="https://en.wikipedia.org/wiki/Quakers" target="_blank">Quaker movement</a> in Charlbury[cite: 12].</p>
     </div>
-
     <div id="gen10" class="generation-content">
         <h3>Generation 10: Henry Busby (Born 1825)</h3>
-        <p>Henry Busby was born in 1825 in Garret Street, Hook Norton[cite: 9]. Following his father into the building trade, he became a master slater and plasterer, running his business from the family home[cite: 9]. He married Mary Ann Moulder in 1849[cite: 9].</p>
+        <p>Henry became a master slater and plasterer, running his business from the family home in Garret Street[cite: 9].</p>
     </div>
-
     <div id="gen11" class="generation-content">
         <h3>Generation 11: Henry Busby (Born 1855)</h3>
-        <p>Born in Hook Norton in 1855, Henry was a master slater and plasterer who founded the Hook Norton Temperance Band[cite: 4]. The band featured so many of his sons and grandsons that it was affectionately known locally as the 'Busby band'[cite: 4].</p>
+        <p>Henry was a master slater who founded the Hook Norton Temperance Band[cite: 4]. The band featured so many family members it became known locally as the 'Busby band'[cite: 4].</p>
     </div>
 
-    <div id="genModern" class="generation-content">
-        <h3>Dr. John Walter Busby</h3>
-        <p>A doctor of medicine in Warwick who proudly solidified this branch of the family's legacy by successfully petitioning the College of Arms, resulting in an official Grant of Arms in 1976.</p>
-    </div>
-
-    <h2>500 Years in Oxfordshire</h2>
-    <p>For over half a millennium, the Busby family has left an indelible mark on the villages and towns of Oxfordshire. The family's journey reflects the evolution of English rural life, moving from husbandmen to yeoman farmers, and eventually establishing themselves as master builders and tradesmen.</p>
-    <ul>
-        <li><strong><a href="https://en.wikipedia.org/wiki/Deddington" target="_blank">Clifton & Deddington</a>:</strong> The foundational roots of the family from the 1500s through the 17th century[cite: 21, 28].</li>
-        <li><strong><a href="https://en.wikipedia.org/wiki/Enstone" target="_blank">Enstone & Great Rollright</a>:</strong> The home of the Reade and Spelsbury families, who intermarried with the Busbys in the late 1600s and early 1700s[cite: 19, 28].</li>
-        <li><strong><a href="https://en.wikipedia.org/wiki/Steeple_Aston#Middle_Aston" target="_blank">Dunstew & Middle Barton</a>:</strong> Transitional homes for the family in the 18th century before firmly planting roots further west[cite: 18, 19].</li>
-        <li><strong><a href="https://en.wikipedia.org/wiki/Hook_Norton" target="_blank">Hook Norton</a>:</strong> The true heartland of the modern family. From 1702 onwards, generations of Busbys operated as master slaters, plasterers, grocers, and musicians in this village[cite: 4, 9, 29].</li>
-    </ul>
-
-    <h2>Notable Figures & Connections</h2>
-    <div class="grid-section">
-        <div class="card">
-            <h3><a href="https://en.wikipedia.org/wiki/John_Busby" target="_blank">Sir John Busby</a></h3>
-            <p>A prominent lawyer who worked for the Royalists and the Verney family in Buckinghamshire. In recognition of his service, he was granted a knighthood and a family crest. While he is not in our direct paternal lineage, his crest was proudly (and unofficially) adopted by many later Busbys who carved it onto their tombstones across Oxfordshire.</p>
-        </div>
-
-        <div class="card">
-            <h3><a href="https://en.wikipedia.org/wiki/Richard_Busby" target="_blank">Dr. Richard Busby</a> (1606–1695)</h3>
-            <p>An English Anglican priest who served as the famously strict Headmaster of Westminster School for over 55 years. Among the many illustrious pupils he shaped was the legendary architect <strong><a href="https://en.wikipedia.org/wiki/Christopher_Wren" target="_blank">Sir Christopher Wren</a></strong>, the man responsible for rebuilding St Paul's Cathedral and 51 other churches after the Great Fire of London.</p>
-        </div>
-
-        <div class="card">
-            <h3><a href="https://en.wikipedia.org/wiki/Edward_Stone_(natural_philosopher)" target="_blank">Reverend Edward Stone</a> (1702–1768)</h3>
-            <p>A Church of England cleric globally famous for discovering the active ingredient in aspirin. He is directly connected to our family history because he was the Justice of the Peace in <a href="https://en.wikipedia.org/wiki/Chipping_Norton" target="_blank">Chipping Norton</a> who examined our ancestor Benjamin Busby and signed his vital settlement certificate in 1765[cite: 17]!</p>
-        </div>
+    <!-- Verbatim Archives -->
+    <h2>Original Archival Transcripts</h2>
+    <p>Below are the raw, verbatim transcripts from the primary historical research.</p>
+    <div class="verbatim-archive">
+        <strong>Generation 1</strong><br>
+        JOHN BUSBY of CLIFTON, DEDDINGTON 1558[cite: 21]<br>
+        John Busby of the hamlet of Clifton, Deddington, Oxfordshire is the first proven direct ancestor... He was a husbandman and died circa 1558. His Will was proved at Oxford in that year. He requested his body to be buried in Deddington churchyard.[cite: 21]<br><br>
         
-        <div class="card">
-            <h3>The Harris Family of Charlbury</h3>
-            <p>Through Anna Prophett (who married Benjamin Busby in 1822)[cite: 12], our family is tied to the Harrises. They are historically documented as founder members of the 17th-century <a href="https://en.wikipedia.org/wiki/Quakers" target="_blank">Quaker movement</a> in Charlbury, Oxfordshire[cite: 12], surviving a turbulent era of religious persecution.</p>
-        </div>
+        <strong>Generation 2</strong><br>
+        SIMON BUSBY of CLIFTON, DEDDINGTON 1598[cite: 20]<br>
+        Simon Busby, our direct ancestor, was a husbandman like his father, John. He died circa 1598 and his Will proved at Oxford. Simon left 10 shillings for the poor of Clifton and Deddington and a bushell of barley to Deddington church.[cite: 22]<br><br>
+
+        <strong>Generation 3</strong><br>
+        WILLIAM BUSBY of CLIFTON, DEDDINGTON 1609[cite: 23]<br>
+        William Busby our direct ancestor, was also a husbandman and died circa 1609. He was buried in Deddington churchyard. We also know that his wife was called Elizabeth and she lived long enough to re-marry.[cite: 23]<br><br>
+
+        <strong>Generation 4</strong><br>
+        SIMON BUSBY of DEDDINGTON 1650[cite: 25]<br>
+        Simon Busby of Deddington our direct ancestor, died in 1650. Entry of his burial at Deddington is in the parish register. Anne is also mentioned in the Oxfordshire Hearth Tax 1665 as having 3 hearths in Clifton, Deddington. This meant that she probably lived in a house with six to eleven rooms and was of the yeoman class...[cite: 25]<br><br>
+
+        <strong>Generation 5</strong><br>
+        ROBERT BUSBY of DEDDINGTON baptised 1644[cite: 28]<br>
+        Robert Busby our direct ancestor was baptised in Deddington church November 24th 1644. Our Robert married Mary Reade of Enstone on 4th January 1682 at Heythrop.[cite: 28] However our Mary Reade who became the wife of Robert Busby, is almost certainly the lady who bought the family property in Hook Norton in 1702...[cite: 29]<br><br>
+
+        <strong>Generation 6</strong><br>
+        ROBERT BUSBY baptised DEDDINGTON April 1684[cite: 19]<br>
+        Robert Busby our direct ancestor, the eldest son of Robert and Mary, was baptised in Deddington church. He married Sarah Spelsbury of Enstone at Kiddington in 1705.[cite: 19]<br><br>
+
+        <strong>Generation 7</strong><br>
+        BENJAMIN BUSBY baptised Dunstew 1721[cite: 18]<br>
+        Benjamin Busby our direct ancestor proved to be the link that enabled me to trace our ancestry back from Hook Norton to Deddington... provided the vital link. It was a Settlement Certificate for Benjamin Busby.[cite: 18] The J.P. who examined Benjamin, Edward Stone, was actually also the clergyman of Chipping Norton who had first described the analgesic powers of willow bark i.e. he was the person who discovered aspirin...[cite: 17]<br><br>
+
+        <strong>Generation 8</strong><br>
+        BENJAMIN BUSBY of HOOK NORTON baptized 1759[cite: 15]<br>
+        Benjamin, our direct ancestor, the third son of Benjamin and Ann Nixon, was baptized in Hook Norton church in 1759. Although he was not the eldest son of Benjamin and Ann, he must have been the one who continued in the house/farm property that is now, Laburnum Cottage, Queen Street, HN.[cite: 15] We do have one small piece of documentation about this Benjamin which indicates that by this generation the Busbys had diversified into the building trade...[cite: 14]<br><br>
+
+        <strong>Generation 9</strong><br>
+        BENJAMIN BUSBY of HOOK NORTON baptized 1796[cite: 12]<br>
+        Benjamin our direct ancestor was baptized in Hook Norton church on May 5th 1796. He married Anna Prophett of Sibford Ferris... The family tree of this branch is extensive and I do have a copy but the Harrises and Busbys are mentioned in the Victoria County History of Oxford as being founder members of the Quaker movement in the 17th century in Charlbury, Oxfordshire.[cite: 12]<br><br>
+
+        <strong>Generation 10</strong><br>
+        HENRY BUSBY of HOOK NORTON b1825[cite: 10]<br>
+        Henry our direct ancestor was born May 13th 1825 in the family home in what is now called Queen Street but was originally Garret Street, Hook Norton. Henry followed his father Benjamin into the building trade. On 15th April 1849 he married Mary Ann Moulder...[cite: 9]<br><br>
+
+        <strong>Generation 11</strong><br>
+        HENRY (Born 1855)[cite: 5]<br>
+        Henry, our direct ancestor, was born in Hook Norton in 1855. He followed his father into the building trade becoming a master slater and plasterer.[cite: 4] Henry was musical and was said to have founded the Hook Norton Temperance Band (later the Hook Norton Band). In fact all his sons were instrumentalists in the band from quite an early age, followed by his grandsons. It was even called the 'Busby band'.[cite: 4]
+    </div>
+
+    <!-- Source References -->
+    <div style="margin-top: 40px; font-size: 0.85em; color: #666;">
+        <h4>Document Source Index</h4>
+        <p><em>[cite: 2] IMG_2296.JPG</em> | <em>[cite: 4] IMG_2295.JPG</em> | <em>[cite: 5] IMG_2294.JPG</em> | <em>[cite: 6] IMG_2293.JPG</em> | <em>[cite: 9] IMG_2290.JPG</em> | <em>[cite: 10] IMG_2289.JPG</em> | <em>[cite: 12] IMG_2287.JPG</em> | <em>[cite: 14] IMG_2285.JPG</em> | <em>[cite: 15] IMG_2284.JPG</em> | <em>[cite: 16] IMG_2283.JPG</em> | <em>[cite: 17] IMG_2282.JPG</em> | <em>[cite: 18] IMG_2281.JPG</em> | <em>[cite: 19] IMG_2280.JPG</em> | <em>[cite: 20] IMG_2270.JPG</em> | <em>[cite: 21] IMG_2269.JPG</em> | <em>[cite: 22] IMG_2271.JPG</em> | <em>[cite: 23] IMG_2272.JPG</em> | <em>[cite: 24] IMG_2273.JPG</em> | <em>[cite: 25] IMG_2274.JPG</em> | <em>[cite: 28] IMG_2277.JPG</em> | <em>[cite: 29] IMG_2278.JPG</em></p>
     </div>
 
     <footer>
-        <p>Research carried out by Dr Ann Thurley.</p>
+        <p>Historical Research carried out by Dr Ann Thurley.</p>
     </footer>
 
     <script>
         function openTab(tabId) {
-            // Hide all content
             var contents = document.getElementsByClassName("generation-content");
             for (var i = 0; i < contents.length; i++) {
                 contents[i].classList.remove("active");
             }
-            
-            // Remove active class from all buttons
             var buttons = document.getElementsByClassName("timeline-btn");
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].classList.remove("active");
             }
-            
-            // Show the selected content and activate the button
             document.getElementById(tabId).classList.add("active");
             event.currentTarget.classList.add("active");
         }
