@@ -87,15 +87,6 @@
         .nav-buttons button:hover { background-color: var(--secondary); }
         .nav-buttons button:disabled { background-color: #ccc; cursor: not-allowed; }
 
-        /* Family Tree Styling */
-        .tree-ul { list-style-type: none; border-left: 2px solid var(--primary); padding-left: 20px; margin-left: 10px;}
-        .tree-li { position: relative; margin: 10px 0; padding-left: 15px; }
-        .tree-li::before {
-            content: ''; position: absolute; top: 12px; left: -20px; width: 30px; border-top: 2px solid var(--primary);
-        }
-        .highlight-direct { color: var(--secondary); font-weight: bold; font-size: 1.1em; }
-        .highlight-notable { color: #8e44ad; font-weight: bold; }
-
         /* Transcripts */
         .verbatim-archive {
             background: #fff; border: 1px solid #ccc; padding: 20px;
@@ -291,63 +282,6 @@
         </div>
     </div>
     <br><br>
-
-    <!-- Family Tree Section -->
-    <div class="theme-box" style="background: #fff; border: 1px solid var(--border-light); border-left: 5px solid var(--primary);">
-        <h2>The Busby Family Tree</h2>
-        <p><em>Tracing the direct paternal line, recorded siblings, and notable offshoots.</em></p>
-        <ul class="tree-ul">
-            <li class="tree-li"><span class="highlight-direct">Gen 1: John Busby (Died c. 1558)</span>
-                <ul class="tree-ul">
-                    <li class="tree-li">William Busby</li>
-                    <li class="tree-li">Jane Busby</li>
-                    <li class="tree-li"><span class="highlight-direct">Gen 2: Simon Busby (Died c. 1598)</span>
-                        <ul class="tree-ul">
-                            <li class="tree-li">John Busby</li>
-                            <li class="tree-li">Alice Busby (m. Henry Radford)</li>
-                            <li class="tree-li"><span class="highlight-direct">Gen 3: William Busby (Died c. 1609)</span>
-                                <ul class="tree-ul">
-                                    <li class="tree-li">Christobel, Richard, John, Elizabeth, Bridetts, Mary</li>
-                                    <li class="tree-li"><span class="highlight-notable">Notable Branch: Dr. Richard Busby</span> (1606–1695) <em>Westminster Headmaster</em></li>
-                                    <li class="tree-li"><span class="highlight-notable">Notable Branch: Sir John Busby</span> <em>Royalist Lawyer & Knight</em></li>
-                                    <li class="tree-li"><span class="highlight-direct">Gen 4: Simon Busby (Died 1650)</span>
-                                        <ul class="tree-ul">
-                                            <li class="tree-li">Job, Thomas, Elizabeth, William, Mary, Richard, Simon, Robert (d. 1644), Anne, William</li>
-                                            <li class="tree-li"><span class="highlight-direct">Gen 5: Robert Busby (Baptized 1644)</span>
-                                                <ul class="tree-ul">
-                                                    <li class="tree-li"><span class="highlight-direct">Gen 6: Robert Busby (Baptized 1684)</span>
-                                                        <ul class="tree-ul">
-                                                            <li class="tree-li"><span class="highlight-direct">Gen 7: Benjamin Busby (Baptized 1721)</span>
-                                                                <ul class="tree-ul">
-                                                                    <li class="tree-li"><span class="highlight-direct">Gen 8: Benjamin Busby (Baptized 1759)</span>
-                                                                        <ul class="tree-ul">
-                                                                            <li class="tree-li"><span class="highlight-direct">Gen 9: Benjamin Busby (Baptized 1796)</span>
-                                                                                <ul class="tree-ul">
-                                                                                    <li class="tree-li"><span class="highlight-direct">Gen 10: Henry Busby (Born 1825)</span>
-                                                                                        <ul class="tree-ul">
-                                                                                            <li class="tree-li"><span class="highlight-direct">Gen 11: Henry Busby (Born 1855)</span></li>
-                                                                                        </ul>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
 
     <!-- Origins Section -->
     <div class="flex-section">
