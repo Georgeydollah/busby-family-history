@@ -46,6 +46,11 @@
             border: 1px solid var(--border-light);
         }
 
+        .small-image {
+            max-width: 250px;
+            width: 100%;
+        }
+
         /* Thematic Sections */
         .theme-box {
             background: #eef2f5; padding: 30px; border-radius: 8px;
@@ -59,6 +64,7 @@
         .job-era {
             flex: 1; background: #fff; padding: 20px; border-radius: 8px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid var(--secondary);
+            min-width: 200px;
         }
 
         /* Interactive Timeline Styling */
@@ -92,7 +98,7 @@
 
     <h1>The Busby Family History</h1>
     <div class="intro">
-        <p>A continuous legacy stretching from the 13th century to the present day. Tracing the path from Nordic origins to the master builders of Oxfordshire.</p>
+        <p>A continuous legacy stretching from the 13th century to the present day. Tracing the path from Nordic origins to the master builders and engineers of Oxfordshire and beyond.</p>
     </div>
 
     <!-- Interactive Lineage -->
@@ -182,8 +188,8 @@
     
     <div id="genModern" class="generation-content">
         <h3>1976: Dr. John Walter Busby</h3>
-        <p><strong>The Context:</strong> The late 20th century, representing the family's transition into modern professional and medical fields.</p>
-        <p><strong>The Family:</strong> A doctor of medicine residing in Warwick, Dr. Busby proudly solidified this specific branch of the family's legacy by successfully petitioning the College of Arms, resulting in an official Grant of Arms in 1976.</p>
+        <p><strong>The Context:</strong> The late 20th century represents the family's expanding footprint, moving from the trades of Hook Norton into wider professions and geographical areas across Warwickshire.</p>
+        <p><strong>The Family:</strong> A doctor of medicine residing in Warwick, Dr. Busby proudly solidified a specific branch of the family's legacy by successfully petitioning the College of Arms, resulting in an official Grant of Arms in 1976. This period also marks the continued evolution of the family's enduring connection to building, design, and engineering trades.</p>
     </div>
 
     <!-- The Evolution of the Family Trade -->
@@ -207,8 +213,8 @@
         </div>
         <div class="job-era">
             <h3 style="margin-top:0;">Modern Era</h3>
-            <strong>Professional & Medical</strong>
-            <p style="font-size: 0.9em;">Transitioning into higher education and the professional class, exemplified by Dr. John Walter Busby in Warwick.</p>
+            <strong>The Builders' Legacy</strong>
+            <p style="font-size: 0.9em;">While some branched into medicine and other professions, the family's deep-rooted connection to practical trades remains incredibly strong today, with modern descendants continuing the tradition as dedicated builders, carpenters, and engineers.</p>
         </div>
     </div>
     <br><br>
@@ -218,7 +224,8 @@
         <div class="flex-content">
             <h2>From the North: Our Viking Origins</h2>
             <p>The story of the Busby family begins long before our arrival in Oxfordshire. Etymologically and historically, the name "Busby" points to direct Nordic and Viking descent. Derived from Old Norse, <em>"busk"</em> refers to a shrub or bush, and the suffix <em>"-by"</em> denotes a farmstead or settlement. </p>
-            <p>During the era of the Danelaw, Viking settlers established roots in <a href="https://en.wikipedia.org/wiki/Yorkshire" target="_blank">Yorkshire</a>, founding the village of <a href="https://en.wikipedia.org/wiki/Great_Busby" target="_blank">Great Busby</a>. It was from these northern settlements that our ancestors eventually migrated south toward the Cotswolds, drawn by the booming agricultural economies of the abbeys.</p>
+            <p>During the era of the Danelaw (spanning the 9th to 11th centuries), Viking settlers established roots in <a href="https://en.wikipedia.org/wiki/Yorkshire" target="_blank">Yorkshire</a>, founding the village of <a href="https://en.wikipedia.org/wiki/Great_Busby" target="_blank">Great Busby</a>. This settlement was officially recorded in the historic 1086 Domesday Book. It was from these northern settlements that our ancestors eventually migrated south toward the Cotswolds in the 1200s, drawn by the booming agricultural economies of the abbeys.</p>
+            <p><em>A Note on the Scottish Connection:</em> There is another town named <a href="https://en.wikipedia.org/wiki/Busby,_East_Renfrewshire" target="_blank">Busby</a> in East Renfrewshire, Scotland. Because the name is essentially a topographical description (a farmstead by the bushes), it appeared wherever Norsemen settled. The Scottish branch likely represents an entirely separate family line that formed under the same Danelaw naming conventions.</p>
         </div>
         <div class="flex-image">
             <img class="styled-image" src="images/nordic-map.png" alt="Map of Nordic migration to Yorkshire and Oxford">
@@ -230,11 +237,11 @@
         <h2>The Lions of the Cotswolds & The Wool Trade</h2>
         <div class="flex-section" style="margin-bottom:0;">
             <div class="flex-content">
-                <p>Upon migrating to Oxfordshire, the early Busbys found their fortune as sheep farmers and wool merchants working alongside the local monks and abbeys. The key to this wealth was a rare, majestic breed of sheep originally brought to the British Isles by the Romans: the <strong>Lions of the Cotswolds</strong>.</p>
-                <p>Renowned for their large size and extraordinary, silky fleeces, these sheep produced some of the highest quality wool in medieval Europe. The Busby ancestors capitalized on this, exporting the raw, silky wool directly to the weaving powerhouses of <a href="https://en.wikipedia.org/wiki/Florence" target="_blank">Florence, Italy</a>. This international trade laid the financial foundation for the family's transition into the yeoman and master tradesmen classes.</p>
+                <p>Upon migrating to Oxfordshire in the 13th century, the early Busbys found their fortune as sheep farmers and wool merchants working alongside the local monks and abbeys. The key to this wealth was a rare, majestic breed of sheep originally brought to the British Isles by the Romans: the <strong>Lions of the Cotswolds</strong>.</p>
+                <p>Renowned for their large size and extraordinary, silky fleeces, these sheep produced some of the highest quality wool in medieval Europe. Throughout the 14th and 15th centuries, the Busby ancestors capitalized on this, exporting the raw, silky wool directly to the weaving powerhouses of <a href="https://en.wikipedia.org/wiki/Florence" target="_blank">Florence, Italy</a>. This international trade laid the financial foundation for the family's transition into the yeoman and master tradesmen classes.</p>
             </div>
             <div class="flex-image">
-                <img class="styled-image" src="images/brass-rubbing.png" alt="Brass rubbing of Hook Norton shepherds">
+                <img class="styled-image small-image" src="images/brass-rubbing.png" alt="Brass rubbing of Hook Norton shepherds">
             </div>
         </div>
     </div>
@@ -295,40 +302,51 @@
 
     <!-- Verbatim Archives -->
     <h2>Original Archival Transcripts</h2>
-    <p>Below are the raw, verbatim transcripts from the primary historical research. <em>(Awaiting final text upload for missing segments)</em>.</p>
+    <p>Below are the raw, verbatim transcripts from the primary historical research.</p>
     <div class="verbatim-archive">
         <strong>Generation 1</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        JOHN BUSBY of CLIFTON, DEDDINGTON 1558<br>
+        John Busby of the hamlet of Clifton, Deddington, Oxfordshire is the first proven direct ancestor... He was a husbandman and died circa 1558. His Will was proved at Oxford in that year. He requested his body to be buried in Deddington churchyard.<br><br>
         
         <strong>Generation 2</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        SIMON BUSBY of CLIFTON, DEDDINGTON 1598<br>
+        Simon Busby, our direct ancestor, was a husbandman like his father, John. He died circa 1598 and his Will proved at Oxford. Simon left 10 shillings for the poor of Clifton and Deddington and a bushell of barley to Deddington church.<br><br>
 
         <strong>Generation 3</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        WILLIAM BUSBY of CLIFTON, DEDDINGTON 1609<br>
+        William Busby our direct ancestor, was also a husbandman and died circa 1609. He was buried in Deddington churchyard. We also know that his wife was called Elizabeth and she lived long enough to re-marry.<br><br>
 
         <strong>Generation 4</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        SIMON BUSBY of DEDDINGTON 1650<br>
+        Simon Busby of Deddington our direct ancestor, died in 1650. Entry of his burial at Deddington is in the parish register. Anne is also mentioned in the Oxfordshire Hearth Tax 1665 as having 3 hearths in Clifton, Deddington. This meant that she probably lived in a house with six to eleven rooms and was of the yeoman class...<br><br>
 
         <strong>Generation 5</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        ROBERT BUSBY of DEDDINGTON baptised 1644<br>
+        Robert Busby our direct ancestor was baptised in Deddington church November 24th 1644. Our Robert married Mary Reade of Enstone on 4th January 1682 at Heythrop. However our Mary Reade who became the wife of Robert Busby, is almost certainly the lady who bought the family property in Hook Norton in 1702...<br><br>
 
         <strong>Generation 6</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        ROBERT BUSBY baptised DEDDINGTON April 1684<br>
+        Robert Busby our direct ancestor, the eldest son of Robert and Mary, was baptised in Deddington church. He married Sarah Spelsbury of Enstone at Kiddington in 1705.<br><br>
 
         <strong>Generation 7</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        BENJAMIN BUSBY baptised Dunstew 1721<br>
+        Benjamin Busby our direct ancestor proved to be the link that enabled me to trace our ancestry back from Hook Norton to Deddington... provided the vital link. It was a Settlement Certificate for Benjamin Busby. The J.P. who examined Benjamin, Edward Stone, was actually also the clergyman of Chipping Norton who had first described the analgesic powers of willow bark i.e. he was the person who discovered aspirin...<br><br>
 
         <strong>Generation 8</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        BENJAMIN BUSBY of HOOK NORTON baptized 1759<br>
+        Benjamin, our direct ancestor, the third son of Benjamin and Ann Nixon, was baptized in Hook Norton church in 1759. Although he was not the eldest son of Benjamin and Ann, he must have been the one who continued in the house/farm property that is now, Laburnum Cottage, Queen Street, HN. We do have one small piece of documentation about this Benjamin which indicates that by this generation the Busbys had diversified into the building trade...<br><br>
 
         <strong>Generation 9</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        BENJAMIN BUSBY of HOOK NORTON baptized 1796<br>
+        Benjamin our direct ancestor was baptized in Hook Norton church on May 5th 1796. He married Anna Prophett of Sibford Ferris... The family tree of this branch is extensive and I do have a copy but the Harrises and Busbys are mentioned in the Victoria County History of Oxford as being founder members of the Quaker movement in the 17th century in Charlbury, Oxfordshire.<br><br>
 
         <strong>Generation 10</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]<br><br>
+        HENRY BUSBY of HOOK NORTON b1825<br>
+        Henry our direct ancestor was born May 13th 1825 in the family home in what is now called Queen Street but was originally Garret Street, Hook Norton. Henry followed his father Benjamin into the building trade. On 15th April 1849 he married Mary Ann Moulder...<br><br>
 
         <strong>Generation 11</strong><br>
-        [PASTE FULL TEXT FROM SHEET HERE]
+        HENRY (Born 1855)<br>
+        Henry, our direct ancestor, was born in Hook Norton in 1855. He followed his father into the building trade becoming a master slater and plasterer. Henry was musical and was said to have founded the Hook Norton Temperance Band (later the Hook Norton Band). In fact all his sons were instrumentalists in the band from quite an early age, followed by his grandsons. It was even called the 'Busby band'.
     </div>
 
     <footer>
